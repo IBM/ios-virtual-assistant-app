@@ -1,0 +1,2 @@
+# Use a project from GitHub Enterprise
+github "watson-developer-cloud/swift-sdk" == 0.32.0
