@@ -1,0 +1,12 @@
+Build/
+xcuserdata/
+Carthage/
+Pods/
+*.xcworkspace
+.DS_Store
+
+*.lock
+*.resolved
+
+ioswatsonassistantexample-Swift/ioswatsonassistantexample/BMSCredentials.plist
+ios_swift/ioswatsonassistantexample/BMSCredentials.plist
