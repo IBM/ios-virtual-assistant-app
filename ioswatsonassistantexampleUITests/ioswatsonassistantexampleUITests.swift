@@ -5,7 +5,7 @@
 
 import XCTest
 
-class VirtualAssistantforiOSwithWatsonCKFMGUITests: XCTestCase {
+class ioswatsonassistantexampleUITests: XCTestCase {
 
     override func setUp() {
         super.setUp()

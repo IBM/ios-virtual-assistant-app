@@ -1,7 +1,7 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'VirtualAssistantforiOSwithWatsonCKFMG' do
+target 'ioswatsonassistantexample' do
     pod 'BMSCore', '~> 2.0'
 
 
@@ -21,13 +21,13 @@ target 'VirtualAssistantforiOSwithWatsonCKFMG' do
             end
         end
     end
-    # Pods for VirtualAssistantforiOSwithWatsonCKFMG
-    target 'VirtualAssistantforiOSwithWatsonCKFMGTests' do
+    # Pods for ioswatsonassistantexample
+    target 'ioswatsonassistantexampleTests' do
         inherit! :search_paths
         # Pods for testing
     end
 
-    target 'VirtualAssistantforiOSwithWatsonCKFMGUITests' do
+    target 'ioswatsonassistantexampleUITests' do
         inherit! :search_paths
         # Pods for testing
     end
