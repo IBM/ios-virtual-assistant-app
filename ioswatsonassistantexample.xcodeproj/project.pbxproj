@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B577D8D3AD0246BF85E9C648 /* LICENSE in Sources */ = {isa = PBXBuildFile; fileRef = 8A55E7F6F0B645D59FB24136 /* LICENSE */; };
-		85709E8A07544E0A826FC8E9 /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = 9C109A0F38794245955C06CB /* .gitignore */; };
-		C29B882932CB43CF86AA8B6C /* BMSCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEDC13C69EA64963A7D7D128 /* BMSCredentials.plist */; };
+		6AB41E1DF77046D89EA76FAA /* LICENSE in Sources */ = {isa = PBXBuildFile; fileRef = E28DD457C9C94D86B8CD23BB /* LICENSE */; };
+		C9777C02F0524CC2962F92EF /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = A7E48614B98241F7914AE1BE /* .gitignore */; };
+		F5B14B3B8479490B85B5B594 /* BMSCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA897941392E4FD88C043014 /* BMSCredentials.plist */; };
 		07F03D57C6B14F92D50DBFDC /* Pods_ioswatsonassistantexampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564762CF35AE1CFB6DF240BC /* Pods_ioswatsonassistantexampleUITests.framework */; };
 		241CD224886EDAA788E399D6 /* Pods_ioswatsonassistantexampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1408AF5BA38870C07E899EEC /* Pods_ioswatsonassistantexampleTests.framework */; };
 		555C91AC1D0F0731003E84E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C91AB1D0F0731003E84E3 /* AppDelegate.swift */; };
@@ -24,6 +24,8 @@
 		580A5F8D205D970C001C5A82 /* AssistantV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 580A5F8B205D970C001C5A82 /* AssistantV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5877770D1FF8402B00387021 /* car_training.json in Resources */ = {isa = PBXBuildFile; fileRef = 5877770B1FF8402B00387021 /* car_training.json */; };
 		587777161FF8759500387021 /* AssistantMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587777151FF8759400387021 /* AssistantMessages.swift */; };
+		CAA52008219397EB00EDB743 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA52007219397EB00EDB743 /* RestKit.framework */; };
+		CAA520092193980500EDB743 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAA52007219397EB00EDB743 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E3D862A1202B8ECC00B34DE6 /* AssistantError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D862A0202B8ECC00B34DE6 /* AssistantError.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CAA520092193980500EDB743 /* RestKit.framework in Embed Frameworks */,
 				580A5F8D205D970C001C5A82 /* AssistantV1.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -59,9 +62,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8A55E7F6F0B645D59FB24136 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LICENSE; path = LICENSE; sourceTree = "<group>"; };
-		9C109A0F38794245955C06CB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = .gitignore; path = .gitignore; sourceTree = "<group>"; };
-		DEDC13C69EA64963A7D7D128 /* BMSCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = BMSCredentials.plist; path = BMSCredentials.plist; sourceTree = "<group>"; };
+		E28DD457C9C94D86B8CD23BB /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LICENSE; path = LICENSE; sourceTree = "<group>"; };
+		A7E48614B98241F7914AE1BE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = .gitignore; path = .gitignore; sourceTree = "<group>"; };
+		DA897941392E4FD88C043014 /* BMSCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = BMSCredentials.plist; path = BMSCredentials.plist; sourceTree = "<group>"; };
 		1065AE6E382035A3AFC4529C /* Pods_StarterWatsonConversation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarterWatsonConversation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1408AF5BA38870C07E899EEC /* Pods_ioswatsonassistantexampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ioswatsonassistantexampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FB6B94BD7F5CF6B965945C /* Pods_MySampleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySampleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +99,7 @@
 		C4A3027B4A500CADC2236A43 /* Pods-ioswatsonassistantexampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswatsonassistantexampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ioswatsonassistantexampleUITests/Pods-ioswatsonassistantexampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C588E03443573F2DDF2BE953 /* Pods_MySampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F2362AFA834C538C87F504 /* Pods-ioswatsonassistantexample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ioswatsonassistantexample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ioswatsonassistantexample/Pods-ioswatsonassistantexample.debug.xcconfig"; sourceTree = "<group>"; };
+		CAA52007219397EB00EDB743 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
 		D2B373158808AA846CD105B0 /* Pods-StarterWatsonConversationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarterWatsonConversationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarterWatsonConversationUITests/Pods-StarterWatsonConversationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E2245D77536DEA72D17C06CA /* Pods-StarterWatsonConversationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarterWatsonConversationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarterWatsonConversationTests/Pods-StarterWatsonConversationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3D862A0202B8ECC00B34DE6 /* AssistantError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantError.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			files = (
 				580A5F8C205D970C001C5A82 /* AssistantV1.framework in Frameworks */,
 				55EE197E81F94F406AEA62A6 /* Pods_ioswatsonassistantexample.framework in Frameworks */,
+				CAA52008219397EB00EDB743 /* RestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				580A5F8B205D970C001C5A82 /* AssistantV1.framework */,
+				CAA52007219397EB00EDB743 /* RestKit.framework */,
 				5803AD90205CBE3C00CD3162 /* Default-568h@2x.png */,
 				555C91AA1D0F0731003E84E3 /* ioswatsonassistantexample */,
 				555C91BF1D0F0731003E84E3 /* ioswatsonassistantexampleTests */,
@@ -174,7 +180,7 @@
 		555C91AA1D0F0731003E84E3 /* ioswatsonassistantexample */ = {
 			isa = PBXGroup;
 			children = (
-				DEDC13C69EA64963A7D7D128 /* BMSCredentials.plist */,
+				DA897941392E4FD88C043014 /* BMSCredentials.plist */,
 				5877770A1FF8402B00387021 /* training */,
 				555C91AB1D0F0731003E84E3 /* AppDelegate.swift */,
 				555C91B71D0F0731003E84E3 /* Info.plist */,
@@ -348,7 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C29B882932CB43CF86AA8B6C /* BMSCredentials.plist in Resources */,
+				F5B14B3B8479490B85B5B594 /* BMSCredentials.plist in Resources */,
 				555C91B31D0F0731003E84E3 /* Assets.xcassets in Resources */,
 				5803AD91205CBE3C00CD3162 /* Default-568h@2x.png in Resources */,
 				555C91B11D0F0731003E84E3 /* Main.storyboard in Resources */,

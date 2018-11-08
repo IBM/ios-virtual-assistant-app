@@ -18,7 +18,7 @@
 
 ### Summary
 
-This IBM Cloud Starter Kit will showcase the Watson Assistant service on iOS. We'll walkthrough setting up Xcode, installing dependencies, and running the application.
+This IBM Cloud Starter Kit will showcase the Watson Assistant service on iOS. We'll walk through setting up Xcode, installing dependencies, and running the application.
 
 By running this code, you'll understand how to:
 
@@ -54,9 +54,9 @@ By running this code, you'll understand how to:
 
 ## Steps
 
-* [1. Use CocoaPods to create an Xcode workspace](#use-cocoapods-to-create-an-xcode-workspace)
-* [2. Use Carthage to install the Watson Swift SDK](#use-carthage-to-install-the-watson-swift-sdk)
-* [3. Configure Watson Assistant](#configure-watson-assistant)
+1. [Use CocoaPods to create an Xcode workspace](#1-use-cocoapods-to-create-an-xcode-workspace)
+2. [Use Carthage to install the Watson Swift SDK](#2-use-carthage-to-install-the-watson-swift-sdk)
+3. [Configure Watson Assistant](#3-configure-watson-assistant)
 
 ### 1. Use CocoaPods to create an Xcode workspace
 
@@ -91,7 +91,7 @@ For this starter, a pre-configured `Cartfile` has been included. If it was not i
 github "watson-developer-cloud/swift-sdk"
 ```
 
-> NOTE: You may have to run `carthage update --platform iOS --no-use-binaries`, if the binary is a lower version than your current version of Swift.
+> NOTE: You may have to run `carthage update --platform iOS --no-use-binaries` if the binary is a lower version than your current version of Swift.
 
 Once the build has completed, the frameworks can be found in the **Carthage/Build/iOS/** folder. The Xcode project in this starter already includes framework links to the following frameworks in the directory: `AssistantV1.framework`.
 
@@ -99,7 +99,7 @@ Once the build has completed, the frameworks can be found in the **Carthage/Buil
 
 ### 3. Configure Watson Assistant
 
-Ensure you have a running Waton Assistant service, if you do not, create one by going to the link below:
+Ensure you have a running Watson Assistant service, if you do not, create one by going to the link below:
 
   * [**Watson Assistant**](https://console.ng.bluemix.net/catalog/services/conversation)
 
@@ -140,7 +140,7 @@ You can now run the application on a simulator or physical device. Try a few que
 # Links
 
 * [Swift Programming Guide](https://console.bluemix.net/docs/swift/index.html#set_up): Tutorial on Swift app development.
-* [Add a Service to Your App](https://console.bluemix.net/docs/apps/reqnsi.html#add_service): Learn how to add a resource to your cloud native app.
+* [Add a Service to Your App](https://console.bluemix.net/docs/apps/reqnsi.html#add_service): Learn how to add a resource to your cloud-native app.
 
 ## Learn More
 
