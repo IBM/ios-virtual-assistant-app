@@ -1,9 +1,9 @@
-## Create a virtual assistant for iOS using Watson Assistant
+# Create a virtual assistant for iOS using Watson Assistant
 
 [![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://bluemix.net)
 [![Platform](https://img.shields.io/badge/platform-ios_swift-lightgrey.svg?style=flat)](https://developer.apple.com/swift/)
 
-### Table of Contents
+## Table of Contents
 
 * [Summary](#summary)
 * [Flow](#flow)
@@ -16,7 +16,7 @@
 * [Links](#links)
 * [Learn more](#learn-more)
 
-### Summary
+## Summary
 
 This IBM Cloud Starter Kit will showcase the Watson Assistant service on iOS. We'll walk through setting up Xcode, installing dependencies, and running the application.
 
@@ -133,11 +133,11 @@ You can now run the application on a simulator or physical device. Try a few que
 
 ![](https://raw.githubusercontent.com/IBM/pattern-utils/master/virtual-assistant-for-ios/output.gif)
 
-# License
+## License
 
 [Apache 2.0](LICENSE)
 
-# Links
+## Links
 
 * [Swift Programming Guide](https://console.bluemix.net/docs/swift/index.html#set_up): Tutorial on Swift app development.
 * [Add a Service to Your App](https://console.bluemix.net/docs/apps/reqnsi.html#add_service): Learn how to add a resource to your cloud-native app.
