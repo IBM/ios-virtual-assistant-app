@@ -3,21 +3,6 @@
 
 # Create a virtual assistant for iOS using Watson Assistant
 
-## Table of Contents
-
-* [Summary](#summary)
-* [Flow](#flow)
-* [Components](#included-components)
-* [Technologies](#featured-technologies)
-* [Requirements](#requirements)
-* [Steps](#steps)
-* [Sample Output](#sample-output)
-* [License](#license)
-* [Links](#links)
-* [Learn more](#learn-more)
-
-## Summary
-
 This IBM Cloud Starter Kit will showcase the Watson Assistant service on iOS. We'll walk through setting up Xcode, installing dependencies, and running the application.
 
 By running this code, you'll understand how to:
