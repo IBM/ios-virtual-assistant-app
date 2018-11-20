@@ -133,10 +133,6 @@ You can now run the application on a simulator or physical device. Try a few que
 
 ![](https://raw.githubusercontent.com/IBM/pattern-utils/master/virtual-assistant-for-ios/output.gif)
 
-## License
-
-[Apache 2.0](LICENSE)
-
 ## Links
 
 * [Swift Programming Guide](https://console.bluemix.net/docs/swift/index.html#set_up): Tutorial on Swift app development.
@@ -147,3 +143,7 @@ You can now run the application on a simulator or physical device. Try a few que
 * [Other Starter Kits](https://console.bluemix.net/developer/appservice/starter-kits/): Enjoyed this Starter Kit? Check out our other Starter Kits.
 * [Architecture Center](https://www.ibm.com/cloud/garage/architectures): Explore Architectures that provide flexible infrastructure solutions.
 * [IBM Watson Assistant Docs](https://console.bluemix.net/docs/services/conversation/getting-started.html#gettingstarted)
+
+## License
+
+[Apache 2.0](LICENSE)
