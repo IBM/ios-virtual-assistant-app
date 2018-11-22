@@ -1,11 +1,26 @@
-[![](https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg)](https://bluemix.net)
+## Create a virtual assistant for iOS using Watson Assistant
+
+[![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://bluemix.net)
 [![Platform](https://img.shields.io/badge/platform-ios_swift-lightgrey.svg?style=flat)](https://developer.apple.com/swift/)
 
-# Create a virtual assistant for iOS using Watson Assistant
+### Table of Contents
 
-This code pattern showcases the Watson Assistant service on iOS. We'll walk through setting up Xcode, installing dependencies, and running the application.
+* [Summary](#summary)
+* [Flow](#flow)
+* [Components](#included-components)
+* [Technologies](#featured-technologies)
+* [Requirements](#requirements)
+* [Steps](#steps)
+* [Sample Output](#sample-output)
+* [License](#license)
+* [Links](#links)
+* [Learn more](#learn-more)
 
-When you have completed this code pattern, you will understand how to:
+### Summary
+
+This IBM Cloud Starter Kit will showcase the Watson Assistant service on iOS. We'll walk through setting up Xcode, installing dependencies, and running the application.
+
+By running this code, you'll understand how to:
 
 * Interact with the Watson Assistant service
 * Use the Watson Swift SDK
@@ -118,7 +133,11 @@ You can now run the application on a simulator or physical device. Try a few que
 
 ![](https://raw.githubusercontent.com/IBM/pattern-utils/master/virtual-assistant-for-ios/output.gif)
 
-## Links
+# License
+
+[Apache 2.0](LICENSE)
+
+# Links
 
 * [Swift Programming Guide](https://console.bluemix.net/docs/swift/index.html#set_up): Tutorial on Swift app development.
 * [Add a Service to Your App](https://console.bluemix.net/docs/apps/reqnsi.html#add_service): Learn how to add a resource to your cloud-native app.
@@ -128,7 +147,3 @@ You can now run the application on a simulator or physical device. Try a few que
 * [Other Starter Kits](https://console.bluemix.net/developer/appservice/starter-kits/): Enjoyed this Starter Kit? Check out our other Starter Kits.
 * [Architecture Center](https://www.ibm.com/cloud/garage/architectures): Explore Architectures that provide flexible infrastructure solutions.
 * [IBM Watson Assistant Docs](https://console.bluemix.net/docs/services/conversation/getting-started.html#gettingstarted)
-
-## License
-
-[Apache 2.0](LICENSE)
