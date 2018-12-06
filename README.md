@@ -54,6 +54,8 @@ By running this code, you'll understand how to:
 
 ## Steps
 
+> As an alternative to the steps below, you can [create this project as a starter kit on IBM Cloud](https://console.bluemix.net/developer/appledevelopment/create-app?defaultDeploymentToolchain=&defaultLanguage=IOS_SWIFT&env_id=ibm%3Ayp%3Aus-south&navMode=catalog&starterKit=448c7258-7c69-3cf3-96b2-0660f891185c), which automatically provisions required services, and injects service credentials into a custom fork of this pattern.
+
 1. [Use CocoaPods to create an Xcode workspace](#1-use-cocoapods-to-create-an-xcode-workspace)
 2. [Use Carthage to install the Watson Swift SDK](#2-use-carthage-to-install-the-watson-swift-sdk)
 3. [Configure Watson Assistant](#3-configure-watson-assistant)
