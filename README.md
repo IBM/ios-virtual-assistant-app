@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://bluemix.net)
+[![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://cloud.ibm.com)
 [![Platform](https://img.shields.io/badge/platform-ios_swift-lightgrey.svg?style=flat)](https://developer.apple.com/swift/)
 
 # Create a virtual assistant for iOS using Watson Assistant
@@ -39,7 +39,7 @@ By running this code, you'll understand how to:
 
 ## Steps
 
-> As an alternative to the steps below, you can [create this project as a starter kit on IBM Cloud](https://console.bluemix.net/developer/appledevelopment/create-app?defaultDeploymentToolchain=&defaultLanguage=IOS_SWIFT&env_id=ibm%3Ayp%3Aus-south&navMode=catalog&starterKit=448c7258-7c69-3cf3-96b2-0660f891185c), which automatically provisions required services, and injects service credentials into a custom fork of this pattern.
+> As an alternative to the steps below, you can [create this project as a starter kit on IBM Cloud](https://cloud.ibm.com/developer/appledevelopment/create-app?defaultDeploymentToolchain=&defaultLanguage=IOS_SWIFT&env_id=ibm%3Ayp%3Aus-south&navMode=catalog&starterKit=448c7258-7c69-3cf3-96b2-0660f891185c), which automatically provisions required services, and injects service credentials into a custom fork of this pattern.
 
 1. [Use CocoaPods to create an Xcode workspace](#1-use-cocoapods-to-create-an-xcode-workspace)
 2. [Use Carthage to install the Watson Swift SDK](#2-use-carthage-to-install-the-watson-swift-sdk)
@@ -88,7 +88,7 @@ Once the build has completed, the frameworks can be found in the **Carthage/Buil
 
 Ensure you have a running Watson Assistant service, if you do not, create one by going to the link below:
 
-  * [**Watson Assistant**](https://console.ng.bluemix.net/catalog/services/conversation)
+  * [**Watson Assistant**](https://cloud.ibm.com/catalog/services/conversation)
 
 Every chatbot needs a dialog, right? To make things easier we've coded this application to look at the available conversations for a specified Watson Assistant service and use the first workspace it finds.
 
@@ -96,7 +96,7 @@ To easily obtain a conversation dialog we can simply launch the Watson Assistant
 
 #### (Optional) 3.1 Specify your own conversation
 
-If you prefer to specify your own conversation you can import or create a new dialog with the Watson Assistant Tool. To do that, follow the [documentation online](https://console.bluemix.net/docs/services/conversation/dialog-build.html). Once created we need to find the workspace ID. See the image below as a guide to finding the workspace ID.
+If you prefer to specify your own conversation you can import or create a new dialog with the Watson Assistant Tool. To do that, follow the [documentation online](https://cloud.ibm.com/docs/services/conversation/dialog-build.html). Once created we need to find the workspace ID. See the image below as a guide to finding the workspace ID.
 
 ![](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-assistant/assistant-workspace-id.gif)
 
@@ -122,14 +122,14 @@ You can now run the application on a simulator or physical device. Try a few que
 
 ## Links
 
-* [Swift Programming Guide](https://console.bluemix.net/docs/swift/index.html#set_up): Tutorial on Swift app development.
-* [Add a Service to Your App](https://console.bluemix.net/docs/apps/reqnsi.html#add_service): Learn how to add a resource to your cloud-native app.
+* [Swift Programming Guide](https://cloud.ibm.com/docs/swift/index.html#set_up): Tutorial on Swift app development.
+* [Add a Service to Your App](https://cloud.ibm.com/docs/apps/reqnsi.html#add_service): Learn how to add a resource to your cloud-native app.
 
 ## Learn More
 
-* [Other Starter Kits](https://console.bluemix.net/developer/appservice/starter-kits/): Enjoyed this Starter Kit? Check out our other Starter Kits.
+* [Other Starter Kits](https://cloud.ibm.com/developer/appservice/starter-kits/): Enjoyed this Starter Kit? Check out our other Starter Kits.
 * [Architecture Center](https://www.ibm.com/cloud/garage/architectures): Explore Architectures that provide flexible infrastructure solutions.
-* [IBM Watson Assistant Docs](https://console.bluemix.net/docs/services/conversation/getting-started.html#gettingstarted)
+* [IBM Watson Assistant Docs](https://cloud.ibm.com/docs/services/conversation/getting-started.html#gettingstarted)
 
 ## License
 
