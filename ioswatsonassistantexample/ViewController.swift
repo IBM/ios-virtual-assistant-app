@@ -165,10 +165,20 @@ class ViewController: MessagesViewController, NVActivityIndicatorViewable {
             guard let assistant = assistant else {
               return
             }
-            
-            assistant.listWorkspaces(failure: failAssistantWithError,
-                                     success: workspaceList)
 
+            assistant.listWorkspaces { response, error in
+                if let error = error {
+                    self.failAssistantWithError(error)
+                    return
+                }
+
+                guard let workspaces = response?.result else {
+                    self.showAlert(.noWorkspacesAvailable)
+                    return
+                }
+
+                self.workspaceList(workspaces)
+            }
         }
     }
 
@@ -245,12 +255,19 @@ class ViewController: MessagesViewController, NVActivityIndicatorViewable {
         }
 
         // Initial assistant message from Watson
-        assistant.message(workspaceID: workspace, failure: failAssistantWithError) { response in
+        assistant.message(workspaceID: workspace) { response, error in
+            if let error = error {
+                self.failAssistantWithError(error)
+                return
+            }
+            guard let watsonMessages = response?.result else {
+                self.showAlert(.noWorkspaceId)
+                return
+            }
 
-            for watsonMessage in response.output.text {
-
+            for watsonMessage in watsonMessages.output.text {
                 // Set current context
-                self.context = response.context
+                self.context = watsonMessages.context
 
                 DispatchQueue.main.async {
 
@@ -259,8 +276,8 @@ class ViewController: MessagesViewController, NVActivityIndicatorViewable {
                     let date = self.dateAddingRandomTime()
 
                     let attributedText = NSAttributedString(string: watsonMessage,
-                                                            attributes: [.font: UIFont.systemFont(ofSize: 14),
-                                                                         .foregroundColor: UIColor.blue])
+                                                                        attributes: [.font: UIFont.systemFont(ofSize: 14),
+                                                                                     .foregroundColor: UIColor.blue])
 
                     // Create a Message for adding to the Message View
                     let message = AssistantMessages(attributedText: attributedText, sender: self.watson, messageId: uniqueID, date: date)
@@ -371,7 +388,7 @@ extension ViewController: MessagesDisplayDelegate {
         return isFromCurrentSender(message: message) ? .white : .darkText
     }
 
-    func detectorAttributes(for detector: DetectorType, and message: MessageType, at indexPath: IndexPath) -> [NSAttributedStringKey : Any] {
+    func detectorAttributes(for detector: DetectorType, and message: MessageType, at indexPath: IndexPath) -> [NSAttributedStringKey: Any] {
         return MessageLabel.defaultAttributes
     }
 
@@ -487,7 +504,7 @@ extension ViewController: MessageCellDelegate {
 
 extension ViewController: MessageLabelDelegate {
 
-    func didSelectAddress(_ addressComponents: [String : String]) {
+    func didSelectAddress(_ addressComponents: [String: String]) {
         print("Address Selected: \(addressComponents)")
     }
 
@@ -534,19 +551,27 @@ extension ViewController: MessageInputBarDelegate {
             .trimmingCharacters(in: .whitespacesAndNewlines)
             .replacingOccurrences(of: "\n", with: ". ")
 
-        // Lets pass the indent to Watson Assistant and see what the response is ?
-        // Get response from Watson based on user text create a message Request first
-        let messageRequest = MessageRequest(input: InputData(text:cleanText), context: self.context)
-
+        // Pass the intent to Watson Assistant and get the response based on user text create a message
         // Call the Assistant API
-        assist.message(workspaceID: workspace, request: messageRequest, failure: failAssistantWithError) { response in
+        assist.message(workspaceID: workspace, input: InputData(text: cleanText), context: context) { response, error in
 
-            for watsonMessage in response.output.text {
+            if let error = error {
+                self.failAssistantWithError(error)
+                return
+            }
+
+            guard let message = response?.result else {
+                self.showAlert(.noData)
+                return
+            }
+
+            for watsonMessage in message.output.text {
                 guard !watsonMessage.isEmpty else {
                     continue
                 }
+
                 // Set current context
-                self.context = response.context
+                self.context = message.context
                 DispatchQueue.main.async {
 
                     let attributedText = NSAttributedString(string: watsonMessage, attributes: [.font: UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.blue])
