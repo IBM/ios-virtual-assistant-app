@@ -16,7 +16,7 @@
 
 import UIKit
 import NVActivityIndicatorView
-import AssistantV1
+import Assistant
 import MessageKit
 import MapKit
 import BMSCore
