@@ -113,8 +113,8 @@ class ViewController: MessagesViewController, NVActivityIndicatorViewable {
 
         // Set the Watson credentials for Assistant service from the BMSCredentials.plist
         // If using IAM authentication
-        if let apikey = configuration["conversationApikey"] as? String,
-           let url = configuration["conversationUrl"] as? String {
+        if let apikey = (configuration["conversation"] as? NSDictionary)?["apikey"] as? String,
+           let url = (configuration["conversation"] as? NSDictionary)?["url"] as? String {
 
                 // Initialize Watson Assistant object
                 let assistant = Assistant(version: date, apiKey: apikey)
@@ -125,9 +125,9 @@ class ViewController: MessagesViewController, NVActivityIndicatorViewable {
                 self.assistant = assistant
 
         // If using user/pwd authentication
-        } else if let password = configuration["conversationPassword"] as? String,
-            let username = configuration["conversationUsername"] as? String,
-            let url = configuration["conversationUrl"] as? String {
+        } else if let password = (configuration["conversation"] as? NSDictionary)?["password"] as? String,
+            let username = (configuration["conversation"] as? NSDictionary)?["username"] as? String,
+            let url = (configuration["conversation"] as? NSDictionary)?["url"] as? String {
 
                 // Initialize Watson Assistant object
                 let assistant = Assistant(username: username, password: password, version: date)
