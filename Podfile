@@ -1,7 +1,6 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '10.0'
 
-target 'ioswatsonassistantexample' do
+target 'iosapp' do
     pod 'BMSCore', '~> 2.0'
 
 
@@ -10,6 +9,7 @@ target 'ioswatsonassistantexample' do
     use_frameworks!
 
     pod 'MessageKit', '~> 0.13'
+    pod 'IBMWatsonAssistantV1', '~> 1.3.1'
     pod 'NVActivityIndicatorView'
 
     post_install do |installer|
@@ -21,13 +21,13 @@ target 'ioswatsonassistantexample' do
             end
         end
     end
-    # Pods for ioswatsonassistantexample
-    target 'ioswatsonassistantexampleTests' do
+    # Pods for iosapp
+    target 'iosappTests' do
         inherit! :search_paths
         # Pods for testing
     end
 
-    target 'ioswatsonassistantexampleUITests' do
+    target 'iosappUITests' do
         inherit! :search_paths
         # Pods for testing
     end
