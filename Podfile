@@ -1,7 +1,7 @@
 platform :ios, '10.0'
 
 target 'iosvirtualassistantapp' do
-    pod 'BMSCore', '~> 2.0'
+    pod 'BMSCore', '~> 2.6.0'
 
 
     # Comment this line if you're not using Swift and don't want to use dynamic frameworks
@@ -9,7 +9,7 @@ target 'iosvirtualassistantapp' do
     use_frameworks!
 
     pod 'MessageKit', '~> 0.13'
-    pod 'IBMWatsonAssistantV1', '~> 1.3.1'
+    pod 'IBMWatsonAssistantV1', '~> 3.5.0'
     pod 'NVActivityIndicatorView'
 
     post_install do |installer|

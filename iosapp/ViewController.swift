@@ -21,12 +21,6 @@ import MessageKit
 import MapKit
 import BMSCore
 
-
-
-
-
-
-
 class ViewController: MessagesViewController, NVActivityIndicatorViewable {
 
     fileprivate let kCollectionViewCellHeight: CGFloat = 12.5
@@ -117,20 +111,8 @@ class ViewController: MessagesViewController, NVActivityIndicatorViewable {
            let url = (configuration["conversation"] as? NSDictionary)?["url"] as? String {
 
                 // Initialize Watson Assistant object
-                let assistant = Assistant(version: date, apiKey: apikey)
-
-                // Set the URL for the Assistant Service
-                assistant.serviceURL = url
-
-                self.assistant = assistant
-
-        // If using user/pwd authentication
-        } else if let password = (configuration["conversation"] as? NSDictionary)?["password"] as? String,
-            let username = (configuration["conversation"] as? NSDictionary)?["username"] as? String,
-            let url = (configuration["conversation"] as? NSDictionary)?["url"] as? String {
-
-                // Initialize Watson Assistant object
-                let assistant = Assistant(username: username, password: password, version: date)
+                let authenticator = WatsonIAMAuthenticator(apiKey: apikey)
+                let assistant = Assistant(version: date, authenticator: authenticator)
 
                 // Set the URL for the Assistant Service
                 assistant.serviceURL = url
@@ -553,7 +535,8 @@ extension ViewController: MessageInputBarDelegate {
 
         // Pass the intent to Watson Assistant and get the response based on user text create a message
         // Call the Assistant API
-        assist.message(workspaceID: workspace, input: InputData(text: cleanText), context: context) { response, error in
+        let input = MessageInput(text: cleanText)
+        assist.message(workspaceID: workspace, input: input, context: context) { response, error in
 
             if let error = error {
                 self.failAssistantWithError(error)
