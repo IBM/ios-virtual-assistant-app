@@ -1,6 +1,6 @@
 platform :ios, '10.0'
 
-target 'iosapp' do
+target 'iosvirtualassistantapp' do
     pod 'BMSCore', '~> 2.0'
 
 
@@ -22,12 +22,12 @@ target 'iosapp' do
         end
     end
     # Pods for iosapp
-    target 'iosappTests' do
+    target 'iosvirtualassistantappTests' do
         inherit! :search_paths
         # Pods for testing
     end
 
-    target 'iosappUITests' do
+    target 'iosvirtualassistantappUITests' do
         inherit! :search_paths
         # Pods for testing
     end
