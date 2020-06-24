@@ -1,3 +1,32 @@
+# OS X Finder
 .DS_Store
-BMSCredentials.plist
+
+# Xcode per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+
+# CocoaPods
 Pods/
+
+# Build products
+build/
+*.o
+*.LinkFileList
+*.hmap
+
+# Automatic backup files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
+
+# IBM Cloud Mobile Services
+iosapp-Swift/iosapp/BMSCredentials.plist
+ios_swift/iosapp/BMSCredentials.plist

@@ -44,9 +44,9 @@ By running this code, you'll understand how to:
 
 ## Requirements
 
-* iOS 12.0+
+* iOS 10.0+
 * Xcode 10+
-* Swift 4.2+
+* Swift 5+
 * [CocoaPods](https://cocoapods.org/)
     * If not installed, run: `sudo gem install cocoapods`
 

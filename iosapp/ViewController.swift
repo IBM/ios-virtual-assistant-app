@@ -21,12 +21,6 @@ import MessageKit
 import MapKit
 import BMSCore
 
-
-
-
-
-
-
 class ViewController: MessagesViewController, NVActivityIndicatorViewable {
 
     fileprivate let kCollectionViewCellHeight: CGFloat = 12.5
@@ -68,7 +62,7 @@ class ViewController: MessagesViewController, NVActivityIndicatorViewable {
         // Register observer
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(didBecomeActive),
-                                               name: .UIApplicationDidBecomeActive,
+                                               name: Notification.Name("didBecomeActiveNotification"),
                                                object: nil)
 
         
@@ -117,20 +111,8 @@ class ViewController: MessagesViewController, NVActivityIndicatorViewable {
            let url = (configuration["conversation"] as? NSDictionary)?["url"] as? String {
 
                 // Initialize Watson Assistant object
-                let assistant = Assistant(version: date, apiKey: apikey)
-
-                // Set the URL for the Assistant Service
-                assistant.serviceURL = url
-
-                self.assistant = assistant
-
-        // If using user/pwd authentication
-        } else if let password = (configuration["conversation"] as? NSDictionary)?["password"] as? String,
-            let username = (configuration["conversation"] as? NSDictionary)?["username"] as? String,
-            let url = (configuration["conversation"] as? NSDictionary)?["url"] as? String {
-
-                // Initialize Watson Assistant object
-                let assistant = Assistant(username: username, password: password, version: date)
+                let authenticator = WatsonIAMAuthenticator(apiKey: apikey)
+                let assistant = Assistant(version: date, authenticator: authenticator)
 
                 // Set the URL for the Assistant Service
                 assistant.serviceURL = url
@@ -323,7 +305,7 @@ class ViewController: MessagesViewController, NVActivityIndicatorViewable {
                                               message: error.alertMessage,
                                               preferredStyle: .alert)
                 // Add an action to the alert
-                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
                 // Show the alert
                 self.present(alert, animated: true, completion: nil)
             }
@@ -360,7 +342,7 @@ extension ViewController: MessagesDataSource {
 
     func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
         let name = message.sender.displayName
-        return NSAttributedString(string: name, attributes: [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: .caption1)])
+        return NSAttributedString(string: name, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
     }
 
     func cellBottomLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
@@ -374,7 +356,7 @@ extension ViewController: MessagesDataSource {
         }
         let formatter = AssistantDateFormatter.formatter
         let dateString = formatter.string(from: message.sentDate)
-        return NSAttributedString(string: dateString, attributes: [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: .caption2)])
+        return NSAttributedString(string: dateString, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption2)])
     }
 
 }
@@ -388,7 +370,7 @@ extension ViewController: MessagesDisplayDelegate {
         return isFromCurrentSender(message: message) ? .white : .darkText
     }
 
-    func detectorAttributes(for detector: DetectorType, and message: MessageType, at indexPath: IndexPath) -> [NSAttributedStringKey: Any] {
+    func detectorAttributes(for detector: DetectorType, and message: MessageType, at indexPath: IndexPath) -> [NSAttributedString.Key: Any] {
         return MessageLabel.defaultAttributes
     }
 
@@ -553,7 +535,8 @@ extension ViewController: MessageInputBarDelegate {
 
         // Pass the intent to Watson Assistant and get the response based on user text create a message
         // Call the Assistant API
-        assist.message(workspaceID: workspace, input: InputData(text: cleanText), context: context) { response, error in
+        let input = MessageInput(text: cleanText)
+        assist.message(workspaceID: workspace, input: input, context: context) { response, error in
 
             if let error = error {
                 self.failAssistantWithError(error)
