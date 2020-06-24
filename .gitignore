@@ -1,12 +1,32 @@
-Build/
-xcuserdata/
-Carthage/
-Pods/
-*.xcworkspace
+# OS X Finder
 .DS_Store
 
-*.lock
-*.resolved
+# Xcode per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
 
-ioswatsonassistantexample-Swift/ioswatsonassistantexample/BMSCredentials.plist
-ios_swift/ioswatsonassistantexample/BMSCredentials.plist
+# CocoaPods
+Pods/
+
+# Build products
+build/
+*.o
+*.LinkFileList
+*.hmap
+
+# Automatic backup files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
+
+# IBM Cloud Mobile Services
+iosapp-Swift/iosapp/BMSCredentials.plist
+ios_swift/iosapp/BMSCredentials.plist
