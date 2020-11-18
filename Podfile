@@ -10,7 +10,7 @@ target 'iosvirtualassistantapp' do
 
     pod 'MessageKit', '~> 0.13'
     pod 'IBMWatsonAssistantV1', '~> 3.5.0'
-    pod 'NVActivityIndicatorView'
+    pod 'NVActivityIndicatorView', '~> 4.8.0'
 
     post_install do |installer|
         installer.pods_project.targets.each do |target|
